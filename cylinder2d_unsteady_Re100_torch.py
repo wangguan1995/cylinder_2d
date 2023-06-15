@@ -474,7 +474,7 @@ if __name__ == "__main__":
         batch_cost_sum += batch_cost
         batch_cost_avg = batch_cost_sum / (epoch + 1)
         ips.append(batch_size / batch_cost_avg)
-        ips_msg = f" [ips: {batch_size / batch_cost_avg:.5f} samples/s]"
+        ips_msg = f" ips: {batch_size / batch_cost_avg:.5f} samples/s"
         logger.info(f"[Train][Epoch {epoch+1}/{EPOCHS}] Loss: {loss.item()}, {ips_msg}")
         if epoch % 100 == 0:
             torch.save(
