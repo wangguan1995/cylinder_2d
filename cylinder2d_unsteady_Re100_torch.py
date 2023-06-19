@@ -315,7 +315,6 @@ if __name__ == "__main__":
     OUTPUT_DIR = (
         "./output_cylinder2d_unsteady_torch" if not args.output_dir else args.output_dir
     )
-    os.chdir("/workspace/wangguan/Pdsc_debug/examples/cylinder/2d_unsteady/")
 
     logger = logging.getLogger("cylinder2d_unsteady")
     logger.setLevel(logging.DEBUG)
