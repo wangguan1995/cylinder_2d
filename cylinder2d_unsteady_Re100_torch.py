@@ -462,8 +462,6 @@ if __name__ == "__main__":
     np.random.seed(seed)
     random.seed(seed)
     args = parse_args()
-    import os
-    os.chdir("/workspace/wangguan/benchmark/frame_benchmark/pytorch/dynamic/PaddleScience/models/cylinder_2d")
     # set output directory
     OUTPUT_DIR = (
         "./output_cylinder2d_unsteady_torch" if not args.output_dir else args.output_dir
@@ -491,7 +489,7 @@ if __name__ == "__main__":
 
     # set model
     device = torch.device("cuda")
-    net_params = (np.load("/workspace/wangguan/benchmark/frame_benchmark/pytorch/dynamic/PaddleScience/models/cylinder_2d/net_params.npy",allow_pickle=True)).item()
+    net_params = (np.load("./net_params.npy",allow_pickle=True)).item()
 
     model_net = MLP(net_params['w'], net_params['b']).to(device)
 
